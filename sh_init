@@ -1,0 +1,4 @@
+local PLUGIN = PLUGIN_SHARED
+
+PLUGIN.name = "Eliminating Proppushing"
+PLUGIN.author = "King Kickass"
