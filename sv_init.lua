@@ -7,7 +7,7 @@ PLUGIN_SHARED = PLUGIN
 
 function PLUGIN.Physgunuse(ply,ent)
                        if ent:IsValid() && ent:GetCollisionGroup(COLLISION_GROUP_NONE) then
-                      ent:SetCollisionGroup(COLLISION_GROUP_WORLD)
+                      ent:SetCollisionGroup(COLLISION_GROUP_WEAPON)
                   else 
         return false
      end
