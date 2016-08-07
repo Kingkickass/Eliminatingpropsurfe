@@ -37,7 +37,7 @@ end
 "Admin Commands"
 ,
 "<player> <on|off>"
-<
+
 ,
  "Disable/Enable Proppush Protection for a player."
  )
