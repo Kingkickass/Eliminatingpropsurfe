@@ -27,12 +27,19 @@ hook.Add( "PhysgunDrop", "Pdrop", PLUGIN.Physgunndrop )
 
 cityrp.command.add("propprotection", "a", 2, function(ply , arg)
 local target = ply
-arg[1] = target
  if arg[2] == "on" then
  	target:SetNWBoll("DisableProppush", false)
  end
  if arg[2] == "off" then
  	target:SetNWBoll("DisableProppush",true)
  end
+end  
+"Admin Commands"
+,
+"<player> <on|off>"
+<
+,
+ "Disable/Enable Proppush Protection for a player."
+ )
 
 cityrp.plugin.register(PLUGIN) 
