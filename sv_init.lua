@@ -6,7 +6,7 @@ PLUGIN_SHARED = PLUGIN
 
  
  function PLUGIN.Physgunuse(ply,ent)
- if ply:GetNWBool("DisableProppush") == false or nil then
+ if ply:GetNWBool("DisableProppush") == true or nil then
      if ent:IsValid() && ent:GetCollisionGroup(COLLISION_GROUP_NONE) then
        ent:SetCollisionGroup(COLLISION_GROUP_WORLD)
     else 
