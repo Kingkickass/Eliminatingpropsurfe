@@ -5,13 +5,12 @@ local PLUGIN = {}
 PLUGIN_SHARED = PLUGIN
 
 
-function PLUGIN.Physgunuse(ply,ent)
-                       if ent:IsValid() && ent:GetCollisionGroup(COLLISION_GROUP_NONE) then
-                      ent:SetCollisionGroup(COLLISION_GROUP_WORLD)
-                  else 
-        return false
-     end
-end 
+ if ply:GetNWBool("DisableProppush") then return end
+
+  if ent:IsValid() && ent:GetCollisionGroup(COLLISION_GROUP_NONE) then
+      ent:SetCollisionGroup(COLLISION_GROUP_WORLD)
+   else 
+      return false
 
 function PLUGIN.Physgunndrop(ply,ent)
                             if ent:IsValid() then	
@@ -37,9 +36,12 @@ end
 "Admin Commands"
 ,
 "<player> <on|off>"
-
 ,
  "Disable/Enable Proppush Protection for a player."
  )
+
+if ply:GetNWBool("DisableProppush") then
+
+
 
 cityrp.plugin.register(PLUGIN) 
