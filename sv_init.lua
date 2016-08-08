@@ -5,12 +5,13 @@ local PLUGIN = {}
 PLUGIN_SHARED = PLUGIN
 
 
-
+ if ply:GetNWBool("DisableProppush") then return end
 
   if ent:IsValid() && ent:GetCollisionGroup(COLLISION_GROUP_NONE) then
       ent:SetCollisionGroup(COLLISION_GROUP_WORLD)
    else 
       return false
+  end
 
 function PLUGIN.Physgunndrop(ply,ent)
                             if ent:IsValid() then	
