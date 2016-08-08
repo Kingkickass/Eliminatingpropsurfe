@@ -25,7 +25,7 @@ hook.Add( "PhysgunPickup", "Ppickup", PLUGIN.Physgunuse )
 
 hook.Add( "PhysgunDrop", "Pdrop", PLUGIN.Physgunndrop )
 
-cityrp.command.add("propprotection", "a", 2, function(ply, arg)
+cityrp.command.add("propprotection", "b", 2, function(ply, arg)
  	target, more = cityrp.player.get( arg[1] );
  	if target then
      if arg[2] == "on" then
