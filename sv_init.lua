@@ -5,7 +5,7 @@ local PLUGIN = {}
 PLUGIN_SHARED = PLUGIN
 
 
- if ply:GetNWBool("DisableProppush") then return end
+
 
   if ent:IsValid() && ent:GetCollisionGroup(COLLISION_GROUP_NONE) then
       ent:SetCollisionGroup(COLLISION_GROUP_WORLD)
@@ -40,7 +40,6 @@ end
  "Disable/Enable Proppush Protection for a player."
  )
 
-if ply:GetNWBool("DisableProppush") then
 
 
 
