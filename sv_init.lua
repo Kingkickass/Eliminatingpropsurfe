@@ -29,10 +29,10 @@ cityrp.command.add("propprotection", "a", 2, function(ply, arg)
  	target, more = cityrp.player.get( arg[1] );
  	if target then
      if arg[2] == "on" then
-     	target:SetNWBool("DisableProppush", false)
+     	target:SetNWBool("DisableProppush", true)
      end
      if arg[2] == "off" then
-     	target:SetNWBool("DisableProppush",true)
+     	target:SetNWBool("DisableProppush",false)
      end
    elseif more then
  		local names = cityrp.player.playerstostring( more );
